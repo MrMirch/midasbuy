@@ -40,9 +40,9 @@ $playid = $_GET['playid'];
 $linky = $_SERVER['HTTP_HOST'];
 if($email){
 $api_key = "26dc150b1cf3c41dc866400812300e6d";
-$cty1 = file_get_contents("http://api.ipstack.com/".$ipp."?access_key=".$api_key."&format=1");
+$cty1 = file_get_contents("http://ip-api.com/json");
 $jsondata = json_decode($cty1);
-$cty = $jsondata->country_name;
+$cty = $jsondata->country;
 
 $ipp = file_get_contents("http://ip-api.com/json");
 
