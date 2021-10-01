@@ -57,7 +57,7 @@ $code= file_get_contents("http://api.ipstack.com/".$ipp."?access_key=".$api_key.
 $jsondata = json_decode($code);
 
 
-$code= $jsondata-calling_code;
+$code= $jsondata->calling_code;
     
     
 
